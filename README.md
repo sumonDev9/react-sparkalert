@@ -1,5 +1,5 @@
 # 🎉 React SparkAlert
-**@srkm/react-sparkalert** is a simple, lightweight, and fully customizable toast notification library built for React.
+**@rskm/react-sparkalert** is a simple, lightweight, and fully customizable toast notification library built for React.
 
 ## ✨ Features
 
@@ -38,13 +38,13 @@
 
 ```bash
 # Using npm
-npm install @srkm/react-sparkalert
+npm install @rskm/react-sparkalert
 
 # Using yarn
-yarn add @srkm/react-sparkalert
+yarn add @rskm/react-sparkalert
 
 # Using pnpm
-pnpm add @srkm/react-sparkalert
+pnpm add @rskm/react-sparkalert
 ```
 
 ---
@@ -54,13 +54,13 @@ pnpm add @srkm/react-sparkalert
 ### Import CSS: Import the CSS file in your main entry file (like App.tsx/app.jsx, main.tsx/main.jsx, or layout.tsx/jsx for Next.js).
 
 ```tsx
-import '@srkm/react-sparkalert/dist/index.css'
+import '@rskm/react-sparkalert/dist/index.css'
 ```
 
 ### 2 Add ToastContainer to your app
 
 ```tsx
-import { ToastContainer } from '@srkm/react-sparkalert';
+import { ToastContainer } from '@rskm/react-sparkalert';
 
 function App() {
   return (
@@ -77,7 +77,7 @@ export default App;
 ### 3 Use toast anywhere in your app
 
 ```tsx
-import { toast } from '@srkm/react-sparkalert';
+import { toast } from '@rskm/react-sparkalert';
 
 function MyComponent() {
   const showToast = () => {
@@ -95,7 +95,7 @@ function MyComponent() {
 ### Toast Types
 
 ```tsx
-import { toast } from '@srkm/react-sparkalert';
+import { toast } from '@rskm/react-sparkalert';
 
 // Success notification
 toast.success('Profile updated successfully!');
@@ -382,10 +382,10 @@ toast.success('Message', {
 
 ###  Import CSS: Import the CSS file in your main entry file (like App.tsx/jsx, main.tsx/jsx, or layout.tsx/jsx for Next.js).
 ```tsx
-import '@srkm/react-sparkalert/dist/index.css'
+import '@rskm/react-sparkalert/dist/index.css'
 ```
 ```tsx
-import { toast, ToastContainer } from '@srkm/react-sparkalert';
+import { toast, ToastContainer } from '@rskm/react-sparkalert';
 
 function App() {
   const handleSuccess = () => {
@@ -513,7 +513,7 @@ toast.success('Inline styled!', {
 
 ```tsx
 import { createContext, useContext } from 'react';
-import { toast } from '@srkm/react-sparkalert';
+import { toast } from '@rskm/react-sparkalert';
 
 const NotificationContext = createContext();
 
@@ -617,7 +617,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🔗 Links
 
-- [NPM Package](https://www.npmjs.com/package/@srkm/react-sparkalert)
+- [NPM Package](https://www.npmjs.com/package/@rskm/react-sparkalert)
 - [GitHub Repository](https://github.com/sumonDev9/react-sparkalert)
 
 

@@ -1,5 +1,5 @@
 {
-  "name": "@srkm/react-sparkalert",
+  "name": "@rskm/react-sparkalert",
   "version": "1.0.0",
   "description": "A professional, feature-rich React toast notification library with TypeScript support",
   "main": "dist/index.js",
