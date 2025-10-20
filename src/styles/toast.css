@@ -1,0 +1,458 @@
+/* Toast Container */
+.toast-container {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.toast-position-top-left {
+  top: 0;
+  left: 0;
+}
+
+.toast-position-top-right {
+  top: 0;
+  right: 0;
+}
+
+.toast-position-top-center {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.toast-position-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+.toast-position-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.toast-position-bottom-center {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Toast Base Styles */
+.toast {
+  pointer-events: auto;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toast-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+}
+
+.toast-icon-wrapper {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.toast-body {
+  flex: 1;
+  word-break: break-word;
+  padding-top: 2px;
+}
+
+.toast-close-btn {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.toast-close-btn:hover {
+  opacity: 1;
+}
+
+.toast-close-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Progress Bar */
+.toast-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.toast-progress-fill {
+  height: 100%;
+  transition: width 0.1s linear;
+}
+
+/* Light Theme */
+.toast-theme-light {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.toast-theme-light .toast-close-btn {
+  color: #1a1a1a;
+}
+
+/* Dark Theme */
+.toast-theme-dark {
+  background: #1a1a1a;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.toast-theme-dark .toast-close-btn {
+  color: #ffffff;
+}
+
+.toast-theme-dark .toast-progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Success Toast #0abe82 */
+.toast-success .toast-icon {
+  color: rgb(52, 179, 14);
+}
+
+.toast-success .toast-progress-fill {
+  background: rgb(52, 179, 14);
+}
+
+.toast-theme-colored.toast-success {
+  background: rgb(52, 179, 14);
+  color: #ffffff;
+}
+
+.toast-theme-colored.toast-success .toast-close-btn {
+  color: #ffffff;
+}
+
+.toast-theme-colored.toast-success .toast-progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.toast-theme-colored.toast-success .toast-progress-fill {
+  background: #ffffff;
+}
+
+/* Error Toast */
+.toast-error .toast-icon {
+  color: #f33d3d;
+}
+
+.toast-error .toast-progress-fill {
+  background: #f33d3d;
+}
+
+.toast-theme-colored.toast-error {
+  background: #f33d3d;
+  color: #ffffff;
+}
+
+.toast-theme-colored.toast-error .toast-close-btn {
+  color: #ffffff;
+}
+
+.toast-theme-colored.toast-error .toast-progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.toast-theme-colored.toast-error .toast-progress-fill {
+  background: #ffffff;
+}
+
+/* Warning Toast */
+.toast-warning .toast-icon {
+  color: #f59d05;
+}
+
+.toast-warning .toast-progress-fill {
+  background: #f59d05;
+}
+
+.toast-theme-colored.toast-warning {
+  background: #f59d05;
+  color: #ffffff;
+}
+
+.toast-theme-colored.toast-warning .toast-close-btn {
+  color: #ffffff;
+}
+
+.toast-theme-colored.toast-warning .toast-progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.toast-theme-colored.toast-warning .toast-progress-fill {
+  background: #ffffff;
+}
+
+/* Info Toast */
+.toast-info .toast-icon {
+  color: #3480fa;
+}
+
+.toast-info .toast-progress-fill {
+  background: #3480fa;
+}
+
+.toast-theme-colored.toast-info {
+  background: #3480fa;
+  color: #ffffff;
+}
+
+.toast-theme-colored.toast-info .toast-close-btn {
+  color: #ffffff;
+}
+
+.toast-theme-colored.toast-info .toast-progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.toast-theme-colored.toast-info .toast-progress-fill {
+  background: #ffffff;
+}
+
+/* Loading Toast */
+.toast-loading .toast-icon {
+  color: #6366f1;
+}
+
+.toast-spinner {
+  animation: toast-spin 1s linear infinite;
+}
+/* Fix for colored theme icons */
+.toast-theme-colored.toast-success .toast-icon,
+.toast-theme-colored.toast-error .toast-icon,
+.toast-theme-colored.toast-warning .toast-icon,
+.toast-theme-colored.toast-info .toast-icon,
+.toast-theme-colored.toast-loading .toast-icon {
+  color: #ffffff;
+}
+
+@keyframes toast-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Transitions */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes flipIn {
+  from {
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(400px) rotateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flipOut {
+  from {
+    transform: perspective(400px) rotateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotateX(90deg);
+    opacity: 0;
+  }
+}
+
+.toast-transition-slide {
+  animation: slideIn 0.3s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.toast-transition-slide.toast-closing {
+  animation: slideOut 0.3s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.toast-transition-bounce {
+  animation: bounceIn 0.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.toast-transition-bounce.toast-closing {
+  animation: bounceOut 0.3s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.toast-transition-zoom {
+  animation: zoomIn 0.3s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.toast-transition-zoom.toast-closing {
+  animation: zoomOut 0.3s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.toast-transition-flip {
+  animation: flipIn 0.5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.toast-transition-flip.toast-closing {
+  animation: flipOut 0.3s ease-in;
+  animation-fill-mode: forwards;
+}
+
+/* Responsive */
+/* @media (max-width: 480px) {
+  .toast {
+    min-width: 280px;
+    max-width: calc(100vw - 32px);
+  }
+  
+  .toast-container {
+    padding: 8px;
+  }
+} */
+
+
+@media (max-width: 480px) {
+  .toast-container {
+    /* 1. Container-ke full width kore din */
+    width: 100vw;
+    max-width: 100%;
+    
+    /* 2. Consistent padding din (screen-er dui pashe) */
+    padding: 16px; 
+    
+    /* 3. Desktop positioning override korun */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: auto; /* Default hisebe shob upore jabe */
+    transform: none; /* Center position-er jonno reset */
+  }
+
+  /* 4. Bottom position-guloke thik jaygay pathan */
+  .toast-position-bottom-left,
+  .toast-position-bottom-right,
+  .toast-position-bottom-center {
+    top: auto;
+    bottom: 0;
+  }
+  
+  /* 5. Toast-ke container-er full width din */
+  .toast {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0; /* Choto screen-e min-width baad din */
+  }
+}

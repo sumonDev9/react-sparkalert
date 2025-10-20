@@ -1,0 +1,71 @@
+{
+  "name": "@srkm/react-sparkalert",
+  "version": "1.0.0",
+  "description": "A professional, feature-rich React toast notification library with TypeScript support",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run build"
+  },
+"keywords": [
+    "react",
+    "react-toast",
+    "toast",
+    "notification",
+    "alert",
+    "toaster",
+    "message",
+    "snackbar",
+    "popup",
+    "toast-notification",
+    "react-notification",
+    "sparkalert",
+    "react-sparkalert",
+    "typescript",
+    "react-component",
+    "ui-component",
+    "notifications",
+    "react-toastify-alternative",
+    "lightweight-toast",
+    "modern-toast"
+  ],
+  "author": "Sumon Mitra",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sumonDev9/react-sparkalert.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sumonDev9/react-sparkalert/issues"
+  },
+  "homepage": "https://github.com/sumonDev9/react-sparkalert#readme",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.9.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  }
+}
