@@ -1,8 +1,4 @@
 # 🎉 React SparkAlert
-[![npm version](https://img.shields.io/npm/v/@srkm/react-sparkalert.svg)](https://www.npmjs.com/package/@srkm/react-sparkalert)
-[![npm downloads](https://img.shields.io/npm/dm/@srkm/react-sparkalert.svg)](https://www.npmjs.com/package/@srkm/react-sparkalert)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 **@srkm/react-sparkalert** is a simple, lightweight, and fully customizable toast notification library built for React.
 
 ## ✨ Features
